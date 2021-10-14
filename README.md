@@ -1,7 +1,7 @@
-# MicroServicioGenerico
+# Descripción
 Microservicio completamente genérico con soporte para keycloak y swagger
 
-docker compose de keycloak y  PostgreSQL
+# Usar Docker para el despliegue en local de keycloak y  PostgreSQL
 
 docker-compose.yml
 ```
