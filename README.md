@@ -36,9 +36,14 @@ services:
         KEYCLOAK_PASSWORD: MaQui
         
       ports:
-        - 80:8080
+        - 9000:8080
       depends_on:
         - postgres
 
 ```
 Estando en la misma carpeta que el archivo: `docker-compose up -d`
+
+Cuando estén levantadas las 2 imágenes tendremos que ir a: http://localhost:9000/auth/ para entrar a keycloack
+
+Le daremos a *administration console*
+y las credenciales serán MaQui y MaQui o las que hayais definido en el docker-compose
