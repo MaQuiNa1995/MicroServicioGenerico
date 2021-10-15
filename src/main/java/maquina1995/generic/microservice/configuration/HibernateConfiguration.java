@@ -38,7 +38,7 @@ public class HibernateConfiguration {
 	 */
 	@Bean
 	public DataSource datasource(@Value(value = "${database.user:sa}") String user,
-	        @Value(value = "${database.password}") String pass,
+	        @Value(value = "${database.password:}") String pass,
 	        @Value(value = "${database.driver:org.hsqldb.jdbcDriver}") String driver,
 	        @Value(value = "${database.url:jdbc:hsqldb:mem:maquina1995}") String url,
 	        @Value(value = "${database.poolName:MaQuiNa1995-HikariCP}") String poolName) {
