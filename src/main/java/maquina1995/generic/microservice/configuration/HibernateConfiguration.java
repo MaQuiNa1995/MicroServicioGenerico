@@ -43,7 +43,7 @@ public class HibernateConfiguration {
 		dataSource.setJdbcUrl(url);
 
 		dataSource.setMaximumPoolSize(5);
-		dataSource.setPoolName("BinaryShock-HikariCP");
+		dataSource.setPoolName("MaQuina1995-HikariCP");
 
 		dataSource.addDataSourceProperty("dataSource.cachePrepStmts", "true");
 		dataSource.addDataSourceProperty("dataSource.prepStmtCacheSize", "250");
