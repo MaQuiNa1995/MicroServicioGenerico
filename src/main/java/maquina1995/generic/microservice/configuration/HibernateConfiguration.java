@@ -20,20 +20,28 @@ public class HibernateConfiguration {
 	/**
 	 * Crea el bean encargado de la configuración de base de datos
 	 * 
-	 * @param user {@link String} <code>${database.user}</code> usuario de base de
-	 *             datos
+	 * @param user {@link String} <code>${database.user:sa}</code> usuario de base
+	 *             de datos
 	 * @param pass {@link String} <code>${database.password}</code> password de base
 	 *             de datos
-	 * @param user {@link String} <code>${database.driver}</code> driver de base de
-	 *             datos
-	 * @param pass {@link String} <code>${database.url}</code> url de base de datos
+	 * @param user {@link String}
+	 *             <code>${database.driver:org.hsqldb.jdbcDriver}</code> driver de
+	 *             base de datos
+	 * @param pass {@link String}
+	 *             <code>${database.url:jdbc:hsqldb:mem:maquina1995}</code> url de
+	 *             base de datos
+	 * @param pass {@link String}
+	 *             <code>${database.poolName:MaQuiNa1995-HikariCP}</code> nombre del
+	 *             pool
 	 * 
 	 * @return {@link HikariDataSource} configurado
 	 */
 	@Bean
-	public DataSource datasource(@Value(value = "${database.user}") String user,
-	        @Value(value = "${database.password}") String pass, @Value(value = "${database.driver}") String driver,
-	        @Value(value = "${database.url}") String url) {
+	public DataSource datasource(@Value(value = "${database.user:sa}") String user,
+	        @Value(value = "${database.password}") String pass,
+	        @Value(value = "${database.driver:org.hsqldb.jdbcDriver}") String driver,
+	        @Value(value = "${database.url:jdbc:hsqldb:mem:maquina1995}") String url,
+	        @Value(value = "${database.poolName:MaQuiNa1995-HikariCP}") String poolName) {
 
 		HikariDataSource dataSource = new HikariDataSource();
 
@@ -43,7 +51,7 @@ public class HibernateConfiguration {
 		dataSource.setJdbcUrl(url);
 
 		dataSource.setMaximumPoolSize(5);
-		dataSource.setPoolName("MaQuina1995-HikariCP");
+		dataSource.setPoolName(poolName);
 
 		dataSource.addDataSourceProperty("dataSource.cachePrepStmts", "true");
 		dataSource.addDataSourceProperty("dataSource.prepStmtCacheSize", "250");
