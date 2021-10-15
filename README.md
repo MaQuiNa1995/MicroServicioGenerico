@@ -1,3 +1,6 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/dad2ed7d089c48d68e540e94cea7f0b9)](https://www.codacy.com/gh/MaQuiNa1995/MicroServicioGenerico/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MaQuiNa1995/MicroServicioGenerico&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/dad2ed7d089c48d68e540e94cea7f0b9)](https://www.codacy.com/gh/MaQuiNa1995/MicroServicioGenerico/dashboard?utm_source=github.com&utm_medium=referral&utm_content=MaQuiNa1995/MicroServicioGenerico&utm_campaign=Badge_Coverage)
+
 # Descripción
 Microservicio completamente genérico con soporte para keycloak y swagger
 
