@@ -45,15 +45,9 @@ public abstract class AbstractControllerImpl<K extends Serializable, D extends A
 
 		List<D> dtos = id.isPresent() ? Arrays.asList(service.find(id.get())) : service.findAll();
 
-		ResponseEntity<DtoWrapper<D>> response;
-		if (dtos.isEmpty()) {
-			response = ResponseEntity.noContent()
-			        .build();
-		} else {
-			response = ResponseEntity.ok(new DtoWrapper<>(dtos));
-		}
+		return dtos.isEmpty() ? ResponseEntity.noContent()
+		        .build() : ResponseEntity.ok(new DtoWrapper<>(dtos));
 
-		return response;
 	}
 
 	@Override

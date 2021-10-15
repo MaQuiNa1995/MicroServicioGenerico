@@ -53,7 +53,7 @@ public interface AbstractController<K extends Serializable, D extends AbstractDt
 	 *                                 parámetro id
 	 *                                 <p>
 	 *                                 Es controlada por
-	 *                                 {@link maquina1995.generic.microservice.controller.config.ControllerExceptionHandler}
+	 *                                 {@link maquina1995.generic.microservice.controller.exception.ControllerExceptionHandler}
 	 */
 	ResponseEntity<DtoWrapper<D>> find(@PathVariable Optional<K> id) throws EntityNotFoundException;
 
@@ -74,7 +74,7 @@ public interface AbstractController<K extends Serializable, D extends AbstractDt
 	 *                                 {@link K} del {@link D}
 	 *                                 <p>
 	 *                                 Es controlada por
-	 *                                 {@link maquina1995.generic.microservice.controller.config.ControllerExceptionHandler}
+	 *                                 {@link maquina1995.generic.microservice.controller.exception.ControllerExceptionHandler}
 	 * 
 	 */
 	ResponseEntity<DtoWrapper<D>> update(@RequestBody D dto) throws EntityNotFoundException;
@@ -98,7 +98,7 @@ public interface AbstractController<K extends Serializable, D extends AbstractDt
 	 *                                 {@link K} del {@link D}
 	 *                                 <p>
 	 *                                 Es controlada por
-	 *                                 {@link maquina1995.generic.microservice.controller.config.ControllerExceptionHandler}
+	 *                                 {@link maquina1995.generic.microservice.controller.exception.ControllerExceptionHandler}
 	 */
 	ResponseEntity<DtoWrapper<D>> delete(@PathVariable K id) throws EntityNotFoundException;
 
