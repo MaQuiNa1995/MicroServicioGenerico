@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 
+import maquina1995.generic.microservice.constant.SwaggerConstants;
 import maquina1995.generic.microservice.exception.EntityNotFoundException;
 import maquina1995.generic.microservice.exception.ErrorMessage;
 
-@RestControllerAdvice(basePackages = "maquina1995.generic.microservice.controller")
+@RestControllerAdvice(basePackages = SwaggerConstants.PROJECT_CONTROLLER_PATH)
 public class ControllerExceptionHandler {
 
 	@ResponseStatus(HttpStatus.NOT_FOUND)

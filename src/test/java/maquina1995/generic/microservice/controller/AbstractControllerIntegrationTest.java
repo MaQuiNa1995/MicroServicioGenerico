@@ -86,7 +86,7 @@ abstract class AbstractControllerIntegrationTest<K extends Serializable,
 	@Test
 	void getTest() {
 		// given
-		E entity = saveEntity();
+		E entity = this.saveEntity();
 		ParameterizedTypeReference<DtoWrapper<D>> parametyzedTypeReference = this.createParametyzedTypeReference();
 
 		// when
@@ -168,7 +168,7 @@ abstract class AbstractControllerIntegrationTest<K extends Serializable,
 	@Test
 	void patchTest() {
 		// given
-		E entity = saveEntity();
+		E entity = this.saveEntity();
 
 		D dto = (D) super.generateObjectFromGeneric(2, this.getClass());
 		dto.setId(entity.getId());
